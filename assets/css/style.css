@@ -1,0 +1,276 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* .tag,
+.tag:hover,
+.tag:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+} */
+
+.tag_a {
+    position: relative; 
+    float:left; 
+    width: 225px;
+}
+
+
+.gif_footer_inner {
+    text-align: center;
+    float:left;
+    border-color: rgb(145, 140, 140);
+    border-width: 1px;
+    border-style: solid;
+    border-top: none;
+    padding: 1px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(231, 223, 223);
+    font-size: 12px;
+    color: rgb(145, 140, 140);
+    width: 75px;
+}
+
+
+.nopad {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nopad_important {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.gif_card {
+    float: left;
+    margin: 5px;
+    /* padding: 0px; */
+}
+
+.gif_image {
+    cursor: pointer;
+}
+
+.header {
+    font-family: 'Yellowtail', cursive; 
+    font-size: 30px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.tag_delete{
+    padding: 0px;
+    margin: 0px;
+    padding-top:10px;
+    /* width: 30px; */
+    /* visibility: hidden; */
+    border: solid;
+    border-color: black;
+}
+
+.tag_delete:hover{
+    /* visibility: visible; */
+}
+
+
+
+.navbar {
+    /* padding: 15px 10px; */
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 0px;
+    margin-bottom: 20px;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+#brand.brand-view {
+    visibility: hidden;
+}
+
+
+
+.btn-info {
+    background-color: #6d7fcc;
+    border-color: #6d7fcc;
+    margin-top: 0px;
+    margin-bottom: 11px;
+}
+
+#sidebar .sidebar-header {
+    padding: 10px;
+    background: #6d7fcc;
+}
+
+.sidebar-header {
+    font-family: 'Yellowtail', cursive; 
+    font-size: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.navbar-brand {
+    padding: 0px;
+    padding-left: 20px;
+    font-family: 'Yellowtail', cursive; 
+    font-size: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #6d7fcc !important;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+/* ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+} */
+
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:10px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    /* #brand.brand-view {
+        visibility: visible;
+        /* padding-right: 200px; */
+    } */
+}
