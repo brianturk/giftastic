@@ -1,3 +1,82 @@
+/* Modal dialog box for add, delting tags...*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #7386D5;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 2px;
+    /* padding: 2px 16px, 5px; */
+    background-color: #7386D5;
+    color: white;
+    justify-content: left
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/*end modal dialog box css */
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -19,23 +98,11 @@ a:focus {
     transition: all 0.3s;
 }
 
-/* .tag,
-.tag:hover,
-.tag:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-} */
-
 .tag_a {
     position: relative; 
     float:left; 
     width: 225px;
 }
-
 
 .gif_footer_inner {
     text-align: center;
@@ -53,8 +120,20 @@ a:focus {
     width: 75px;
 }
 
+#add_tag {
+    cursor: pointer;
+}
 
-.nopad {
+#delete_tag {
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+#current_tag {
+    padding-right:9px;
+}
+
+/* .nopad {
     padding: 0px;
     margin: 0px;
 }
@@ -62,13 +141,31 @@ a:focus {
 .nopad_important {
     padding: 0px !important;
     margin: 0px !important;
-}
+} */
 
 .gif_card {
     float: left;
     margin: 5px;
     /* padding: 0px; */
 }
+
+#more_gifs {
+    float: left;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#more_gifs p {
+    font-family: 'Yellowtail', cursive; 
+    font-size: 40px;
+    color: #7386D5;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#more_gifs p:hover {
+    color: white;
+}
+
 
 .gif_image {
     cursor: pointer;
@@ -85,26 +182,16 @@ a:focus {
     padding: 0px;
     margin: 0px;
     padding-top:10px;
-    /* width: 30px; */
-    /* visibility: hidden; */
     border: solid;
     border-color: black;
 }
 
-.tag_delete:hover{
-    /* visibility: visible; */
-}
-
-
-
 .navbar {
-    /* padding: 15px 10px; */
     background: #fff;
     border: none;
     border-radius: 0;
     padding: 0px;
     margin-bottom: 20px;
-    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-btn {
@@ -225,23 +312,6 @@ ul ul a {
     background: #6d7fcc;
 }
 
-/* ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-} */
-
-
-
-
-
-
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -269,8 +339,4 @@ ul.CTAs a {
         display: none;
     }
 
-    /* #brand.brand-view {
-        visibility: visible;
-        /* padding-right: 200px; */
-    } */
 }
