@@ -26,6 +26,13 @@ var gifs = [];
 $(document).ready(function () {
 
 
+	// $(".git_outer_footer").mouseenter(function() {
+	// 	$(this).css(""
+
+	// }).mouseleave(function() {
+	// 	 $(this).css("background", "00F").css("border-radius", "0px");
+	// });
+
 	//put tags on the page
 	showTags();
 
@@ -272,6 +279,15 @@ $(document).ready(function () {
 				var gDivIF = $("<div>");
 				gDivIF.attr("class", "gif_footer_inner");
 				gDivIF.text(value.rating.toUpperCase());
+
+				
+				// gSpan = $("<span>");
+				// gSpan.attr("id","<span id='more_info_" + key + offset  + "'");
+				// gSpan.html("<i class='fas fa-info-circle'></i>");
+				// gSpan.css("padding-left","5px");
+				// gSpan.css("visibility","hidden");
+
+				// gDivIF.append(gSpan);
 
 				gDivOF.append(gDivIF);
 
